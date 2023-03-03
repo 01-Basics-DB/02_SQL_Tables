@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS coworkers
 (
     firstName VARCHAR(20),
     location VARCHAR(20),
-    age INT,
+    age TINYINT,
     computer VARCHAR(20)   
 );
 
@@ -39,3 +39,6 @@ INSERT INTO coworkers(firstName,location,age,computer) VALUES ("Sohrab","bed",26
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
 SELECT * FROM coworkers;
+
+/* -- Inhalte Filtern --- */
+SELECT * FROM coworkers WHERE location = "pool";
