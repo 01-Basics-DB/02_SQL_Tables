@@ -26,6 +26,16 @@ CREATE TABLE IF NOT EXISTS coworkers
     computer VARCHAR(20)   
 );
 
+/* Alle Tabellen in der DB anzeigen */
 SHOW TABLES;
 
+/* Struktur der Tabelle anzeigen */
 DESCRIBE coworkers;
+
+/* ----- Daten ------- */
+INSERT INTO coworkers(firstName,location,age,computer) VALUES ("Max","office",35,"PC");
+INSERT INTO coworkers(firstName,location,age,computer) VALUES ("Gani","pool",36,"iPad");
+INSERT INTO coworkers(firstName,location,age,computer) VALUES ("Sohrab","bed",26,"Mac");
+
+/* ---- Inhalte der Tabelle anzeigen ---- */
+SELECT * FROM coworkers;
