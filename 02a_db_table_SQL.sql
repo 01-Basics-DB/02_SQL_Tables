@@ -6,7 +6,7 @@
 
 
 /* DB boo löschen, falls vorhanden*/
-DROP DATABASE IF EXISTS boo;
+#DROP DATABASE IF EXISTS boo;
 
 /* DB boo anlegen, falls noch nicht vorhanden*/
 CREATE DATABASE IF NOT EXISTS boo;
@@ -38,7 +38,19 @@ INSERT INTO coworkers(firstName,location,age,computer) VALUES ("Gani","pool",36,
 INSERT INTO coworkers(firstName,location,age,computer) VALUES ("Sohrab","bed",26,"Mac");
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
-SELECT * FROM coworkers;
+#SELECT * FROM coworkers;
 
 /* -- Inhalte Filtern --- */
-SELECT * FROM coworkers WHERE location = "pool";
+#SELECT * FROM coworkers WHERE location = "pool";
+
+/* -- Inhalte sortieren --- */
+SELECT 
+   firstName AS "Name",
+   location AS "Ort",
+   age AS "Alter"
+FROM coworkers
+#WHERE age > 35 AND location = "bed"
+#ORDER BY age ASC
+ORDER BY age DESC
+LIMIT 1
+;
